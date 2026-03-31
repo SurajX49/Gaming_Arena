@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta information for character encoding and responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" maximum-scale=1.0, user-scalable=no">
+
+    <!-- Page title and favicon -->
+    <title>Gaming Arena</title>
+    <link rel="shortcut icon" href="games.png" type="image/x-icon" class="icon-im">
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Intro splash screen displayed on page load -->
+    <div id="intro">
+        <img src="signature_2.png" alt="Signature" id="sign-img">
+    </div>
+
+    <!-- Navigation bar -->
+    <nav>
+        <!-- Sidebar menu for mobile view -->
+        <ul class="sidebar">
+            <!-- Close button for sidebar -->
+            <li onclick="hidesidebar()"><a><img src="close.png"></a></li>
+
+            <!-- Navigation links -->
+            <li><a href="#home">Home</a></li>
+            <li><a href="#Games">Games</a></li>
+            <li><a href="#Tournament">Tournaments</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Main navigation bar -->
+        <ul>
+            <!-- Logo / Branding -->
+            <li><a>Gaming<span> Arena</span></a></li>
+            <!-- Desktop navigation links -->
+            <li><a href="#home" class="hide">Home</a></li>
+            <li><a href="#Games" class="hide">Games</a></li>
+            <li><a href="#Tournament" class="hide">Tournaments</a></li>
+            <li><a href="#contact" class="hide">Contact</a></li>
+
+            <!-- Menu icon for opening sidebar (mobile view) -->
+            <li onclick="showsidebar()">
+                <a href="#"><img src="menu.png" class="menu-i"></a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="first">
+            <div class="text">
+                <!-- Main heading -->
+                <h1>Gaming <br><span>Arena</span></h1>
+
+                <!-- Tagline -->
+                <blockquote>
+                    <h4>" Enter the Realm of Legends "</h4>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="Games">
+        <div class="second">
+            <h1 class="autoshow">Featured Games :</h1>
+
+            <!-- Game cards container -->
+            <div class="games">
+
+                <!-- Individual game card -->
+                <div class="gm">
+                    <img src="COD.jpg" class="img">
+                    <p>CALL OF DUTY</p>
+                    <a href="Info.html">
+                        <button>Know More</button>
+                    </a>
+                </div>
+
+                <div class="gm">
+                    <img src="CS.jpg" class="img">
+                    <p>COUNTER STRIKE</p>
+                    <a href="Info.html">
+                        <button>Know More</button>
+                    </a>
+                </div>
+
+                <div class="gm">
+                    <img src="BGMI.jpg" class="img">
+                    <p>BGMI</p>
+                    <a href="Info.html">
+                        <button>Know More</button>
+                    </a>
+                </div>
+
+                <div class="gm">
+                    <img src="FF.jpg" class="img">
+                    <p>FREE FIRE</p>
+                    <a href="Info.html">
+                        <button>Know More</button>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournament Schedule Section -->
+    <section id="Tournament">
+        <div class="third">
+
+            <!-- Section heading -->
+            <h2 class="autoshow">Tournament Match Schedule :</h2>
+
+            <!-- Tournament schedule table -->
+            <table border="1" cellpadding="4">
+                <tr>
+                    <th>Game</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Mode</th>
+                </tr>
+
+                <!-- Match rows -->
+                <tr>
+                    <td>BGMI</td>
+                    <td>10 APR 2026</td>
+                    <td>10:00 AM</td>
+                    <td>Squad</td>
+                </tr>
+
+                <tr>
+                    <td>Free Fire</td>
+                    <td>10 APR 2026</td>
+                    <td>2:00 PM</td>
+                    <td>SQUAD</td>
+                </tr>
+
+                <tr>
+                    <td>Call of Duty</td>
+                    <td>11 APR 2026</td>
+                    <td>11:00 AM</td>
+                    <td>Team</td>
+                </tr>
+
+                <tr>
+                    <td>Counter Strike</td>
+                    <td>12 APR 2026</td>
+                    <td>1:00 PM</td>
+                    <td>TEAM</td>
+                </tr>
+            </table>
+
+        </div>
+    </section>
+
+    <!-- Contact / Feedback Section -->
+    <div class="feedback">
+        <section id="contact">
+
+            <!-- Contact form -->
+            <form class="autoshow">
+                <h2 style="color: #fff;">Contact :</h2>
+
+                <!-- User input fields -->
+                <input type="text" placeholder="Enter your name">
+                <input type="email" placeholder="Enter your email">
+                <textarea placeholder="Your messege"></textarea>
+
+                <!-- Submit button -->
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- Contact information -->
+            <div class="contact">
+                <p class="autoblur">
+                    <img src="email.png" class="c-im">
+                    Email : <u>gamingarena@gmail.com</u><br>
+
+                    <img src="phone-call.png" class="c-im">
+                    Contact : 91 XXXXXXXXXX<br>
+
+                    <img src="maps-and-flags.png" class="c-im">
+                    Address : Solapur, Maharashtra, India
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer section -->h
+    <footer>
+        <hr>
+        <p>
+           | © 2026 Gaming Arena | Suraj G. Ambure | All rights reserved |
+        </p>
+    </footer>
+
+    <!-- Logo image -->
+    <img src="signature.png" class="logo">
+
+    <script>
+        /**
+         * Function: showsidebar
+         * Purpose: Displays the sidebar menu (used in mobile view)
+         */
+        function showsidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+
+        /**
+         * Function: hidesidebar
+         * Purpose: Hides the sidebar menu
+         */
+        function hidesidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+
+        /**
+         * Intro screen timeout
+         * Purpose: Automatically hides the intro splash screen after 3.5 seconds
+         */
+        setTimeout(() => {
+            document.getElementById("intro").style.display = "none";
+        }, 3500);
+    </script>
+
+</body>
+</html>

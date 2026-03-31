@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+    <link rel="shortcut icon" href="games.png" type="image/x-icon" class="icon-im">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Bebas+Neue&family=Boldonse&family=Bonheur+Royale&family=Bungee&family=Felipa&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Unbounded:wght@200..900&family=Uncial+Antiqua&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Bebas+Neue&family=Boldonse&family=Bonheur+Royale&family=Bungee&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Felipa&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Unbounded:wght@200..900&family=Uncial+Antiqua&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Bebas+Neue&family=Boldonse&family=Bonheur+Royale&family=Bungee&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Felipa&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Press+Start+2P&family=Unbounded:wght@200..900&family=Uncial+Antiqua&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Bebas+Neue&family=Boldonse&family=Bonheur+Royale&family=Bungee&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Felipa&family=Lobster&family=Lugrasimo&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Play:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Unbounded:wght@200..900&family=Uncial+Antiqua&family=Zen+Dots&display=swap');
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0a0a0a;
+}
+
+/* Section */
+.info-section {
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ .back {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+            color: #000;
+            margin: 10px;
+            background-color: #fff;
+            display: flex;
+            justify-content: flex-start;
+            gap: 4em;
+            align-items: center;
+            border-radius: 10px;
+            padding: 5px;
+            width: 20%;
+            font-size: 20px;
+            font-weight: bold;
+            border: inset solid #000;
+        }
+
+         .img {
+            height: 30px;
+            width: 30px;
+        }
+
+h2{
+        color: #de2023c0;
+    text-shadow: 1px 1px 20px #ffffff7a;
+        font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+span{ 
+    color: #fff;
+    margin-left: 5px;
+}
+
+
+/* Cards Layout */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+/* Card Style */
+.card {
+    width: 260px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0,255,195,0.2);
+    box-shadow: 0 0 15px rgba(253, 29, 29, 1);
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+    font-size: 1.5rem;
+}
+
+/* Glow hover effect */
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 25px rgba(253, 29, 29, 1), 0 0 50px rgba(253, 29, 29, 1);
+}
+
+/* Neon border animation */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    padding: 2px;
+    background: linear-gradient(45deg,rgba(253, 29, 29, 1) , #fff, blue);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+}
+
+/* Text */
+.card h3 {
+    margin-top: 0;
+    color: #fff;
+    text-shadow: 1px 1px 20px #ffffff7a;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.card ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+
+
+button {
+    height: 60px;
+    font-size: 22px;
+    width: 150px;
+    border: 1.5px solid #000;
+    background: linear-gradient(90deg, #131a2b 20%, rgba(253, 29, 29, 1) 60%);
+    box-shadow: 10px 10px 10px #00000043;
+    transition: all ease 0.3s;
+}
+
+ button {
+    width: 250px;
+    height: 90px;
+    display: flex;
+    border-radius: 3rem;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Orbitron", sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-container {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+
+    
+            .back {             
+                   position: fixed;
+                top: 20px;
+                left: 20px;
+                display: flex;
+                z-index: 999;
+                width: 40px;
+                border-radius: 30%;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .back p {
+                display: none;
+            }
+
+            .back .img {
+                display: block;
+                margin: auto;
+            }
+
+}
+</style>
+</head>
+<body>
+     <div class="back">
+        <a href="index.html"><img src="previous.png" class="img"></a>
+        <p>Back to Home Page</p>
+    </div>
+    <section class="info-section">
+     <h2>Gaming<span> Arena</span></h2>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>🕹️ About</h3>
+            <p>
+                Join exciting gaming tournaments and compete with players worldwide.
+                Show your skills and win amazing rewards.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📜 Rules</h3>
+            <ul>
+                <li>No cheating or hacking allowed</li>
+                <li>Follow fair play rules</li>
+                <li>Be online before match time</li>
+                <li>Respect all players</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>⚖️ Terms</h3>
+            <ul>
+                <li>Registration is mandatory</li>
+                <li>Entry fee is non-refundable</li>
+                <li>Organizer decisions are final</li>
+                <li>No misuse of platform</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>🏆 Winning</h3>
+            <ul>
+                <li>🥇 ₹5000</li>
+                <li>🥈 ₹3000</li>
+                <li>🥉 ₹1000</li>
+                <li>Bonus rewards available</li>
+            </ul>
+        </div>
+
+    </div>
+    <a href="Register.html"><button>Register</button></a>
+</body>
+</html>

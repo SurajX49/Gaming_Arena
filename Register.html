@@ -1,0 +1,250 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="shortcut icon" href="games.png" type="image/x-icon" class="icon-im">
+    <title>Register</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            background-image: url('Game.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .back {
+            color: #000;
+            margin: 10px;
+            background-color: #fff;
+            display: flex;
+            justify-content: flex-start;
+            gap: 4em;
+            align-items: center;
+            border-radius: 10px;
+            padding: 5px;
+            width: 15%;
+            font-size: 20px;
+            font-weight: bold;
+            border: inset solid #000;
+
+        }
+
+        .img {
+            height: 30px;
+            width: 30px;
+        }
+
+
+        form {
+            color: #fff;
+            border-radius: 20px;
+            border: 2px solid rgba(128, 128, 128, 0.582);
+            padding: 30px;
+            display: block;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(10px);
+            background-color: #ffffff31;
+            height: auto;
+            width: 90%;
+            max-width: 400px;
+            margin-top: 2%;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            border: 1px solid #00000042;
+            margin-bottom: 20px;
+        }
+
+
+        input,
+        select,
+        textarea {
+            font-size: 15px;
+            color: #000;
+            background: transparent;
+            border: none;
+            outline: none;
+            border-bottom: #fff 1px solid;
+            margin-bottom: 20px;
+            padding: 8px 5px;
+            transition: all ease-in-out 0.3s;
+        }
+
+        select {
+            color: #fff;
+        }
+
+        option {
+            color: #000;
+        }
+
+        .course {
+            display: flex;
+            gap: 20px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .btn {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 5em;
+        }
+
+        button {
+            height: 50px;
+            width: 200px;
+            border-radius: 20px;
+            background-color: #000;
+            color: #fff;
+            transition: all ease 0.3s;
+        }
+
+        input:focus {
+            transform: translateY(-5px);
+        }
+
+        button:hover {
+            opacity: 0.80;
+            transform: scale(1.05);
+            transform: translateY(-4px);
+        }
+
+
+
+        @media (max-width:600px) {
+
+            body {
+                background-color: #000;
+                background-image: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                padding: 20px 20px;
+                color: #000;
+            }
+
+            .back {
+                display: flex;
+                z-index: 999;
+                width: 10%;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .back p {
+                display: none;
+            }
+
+            .back .img {
+                display: block;
+                content: url('home.png');
+                margin: auto;
+            }
+
+            form {
+                background-image: url('Game.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 95%;
+                padding: 20px;
+                margin: auto;
+            }
+
+            .course {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .course label {
+                display: flex;
+                align-self: center;
+                gap: 5px;
+                font-size: 20px;
+            }
+
+            .btn {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            button {
+                width: 100%;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back">
+        <a href="Info.html"><img src="previous.png" class="img"></a>
+        <p>Back to Info Page</p>
+    </div>
+    <div class="main">
+
+        <form onsubmit=showmessage()>
+            <h2>Tournment Registration</h2>
+            <hr style="border: 1px solid #fff;">
+            <input type="text" placeholder="Enter Team Name" required><br>
+            <input type="tel" placeholder="Enter your mobile number" required><br>
+            <input type="text" placeholder="Enter your email" required><br>
+            <input type="text" placeholder="Enter your ID" required><br>
+            <div class="gender" required>
+                Gender :
+                <label><input type="radio" name="gender">Male</label>
+                <label><input type="radio" name="gender">Female</label>
+            </div>
+
+            <select required>
+                <option selected disabled>Select Region</option>
+                <option>Asia</option>
+                <option>Europe</option>
+                <option>Brazil</option>
+                <option>US</option>
+            </select>
+
+            <div class="course" required>
+                Members :
+                <label><input type="radio" name="member">Solo</label>
+                <label><input type="radio" name="member">Duo</label>
+                <label><input type="radio" name="member">Squad</label>
+
+            </div>
+
+            <div class="btn">
+                <button type="reset">Reset</button>
+                <button type="submit">Register</button>
+            </div>
+        </form>
+
+        <script>
+            function showmessage() {
+                alert('Registration Completed');
+            }
+        </script>
+    </div>
+</body>
+
+</html>
