@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Register</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Bebas+Neue&family=Boldonse&family=Bonheur+Royale&family=Bungee&family=Felipa&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Unbounded:wght@200..900&family=Uncial+Antiqua&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Bebas+Neue&family=Boldonse&family=Bonheur+Royale&family=Bungee&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Felipa&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Unbounded:wght@200..900&family=Uncial+Antiqua&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Bebas+Neue&family=Boldonse&family=Bonheur+Royale&family=Bungee&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Felipa&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Press+Start+2P&family=Unbounded:wght@200..900&family=Uncial+Antiqua&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Bebas+Neue&family=Boldonse&family=Bonheur+Royale&family=Bungee&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Felipa&family=Lobster&family=Lugrasimo&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Play:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Unbounded:wght@200..900&family=Uncial+Antiqua&family=Zen+Dots&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0B0F18;
+    overflow-x: hidden;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #e51519;
+    overflow: hidden;
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height: 70px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-size: 25px;
+      font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  
+}
+
+
+
+nav a:hover{
+    background-color: #00000092;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    transform: scale(1.05);
+    border-bottom: 1px solid #000;
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+nav li:first-child :hover{
+    background-color: #de1518;
+    transform: scale(1.1);
+}
+
+.sidebar ul{
+    list-style: none;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 350px;
+    z-index: 2000;
+    background-color: #0000006c;
+    color: #fff;
+    backdrop-filter: blur(20px);
+    box-shadow: -10px 0 10px #0000009c;
+   display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.sidebar li{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+.sidebar a{
+     color: #fff;
+     background-color: #00000077;
+}
+
+nav li:last-child{
+    display: none;
+}
+
+
+ .menu-i{
+   height: 26px;
+   width: 26px;
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+      padding-top: 160px;
+    height: auto;
+    text-align: center;
+    min-height: 100vh;
+    background-image: url('i1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(0.5);
+      padding-top: 100px;
+    height: auto;
+    min-height: 100vh;
+}
+
+.first h1{
+     text-shadow: 1px 1px 30px red;
+}
+
+h4 {
+
+   text-align: left;
+    font-size: 4vw;
+    color: #fff;
+    font-family:"Wide Latin";
+  font-weight: 400;
+
+}
+
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+    
+}
+
+.text {
+  margin-left: 10%;
+}
+
+.text h4{
+    font-size: 3vw;
+    text-align: center; 
+    font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text h1 {
+    color: #fff;
+    text-align: center;
+    font-size:10vw;
+    margin: 0px 30px;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+span{
+    color: #de1518;
+    text-shadow: 20px 20px 30px #000 ;
+    font-weight: bold;
+     text-shadow: 0 0 20px #fff;
+}
+
+.i1{
+    height: 550px;
+  
+}
+
+
+.second {
+    display: flex;
+      padding-top: 160px;
+    height: auto;
+    min-height: 100vh;
+}
+
+.second h1 {
+    margin-top: 150px;
+    font-size: 50px;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 5vw;
+    margin-bottom: 2vh;
+    word-spacing: 1.5vw;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.games {
+    display: flex;
+    gap: 10em;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.gm {
+    height: auto;
+    width: 200px;
+    background-color: #000;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 20px 20px 20px #ffffff4b;
+    margin-bottom: 150px;
+    transition: all ease 0.5s;
+
+}
+
+p{
+     font-family: "Zen Dots", sans-serif;
+     font-size: 20px;
+     margin: 20px;
+}
+
+.gm button{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    height: 50px;
+    align-items: center;
+    text-decoration: none;
+       font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    color: #fff; 
+}
+
+.gm a{
+    text-decoration: none;
+     overflow: hidden;
+}
+.gm{
+    overflow: hidden;
+}
+.gm:hover {
+    transform: translateY(-50px);
+}
+
+.image{
+      margin-right: 10vw;
+}
+
+
+.img {
+    display: block;
+    margin: auto;
+    height: 300px;
+    width: 180px;
+    margin-bottom: 20px;
+    transition: all ease 0.5s;
+   
+}
+
+.img:hover{
+    transform:rotate(15deg);
+}
+
+p {
+    color: #fff;
+    text-align: center;
+}
+
+button {
+    height: 60px;
+    font-size: 22px;
+    width: 150px;
+    border: 1.5px solid #000;
+    background: linear-gradient(90deg, #131a2b 10%, rgba(253, 29, 29, 1) 80%);
+    box-shadow: 10px 10px 10px #00000043;
+    transition: all ease 0.3s;
+}
+
+
+table{
+    margin-top: 0;
+ 
+
+}
+
+.third {
+
+     display: flex;
+     flex-direction: column;
+    text-align: center;
+     height: auto;
+    min-height: 100vh;
+   
+}
+
+.third h2 {
+    font-size: 40px;
+    color: #fff;
+    margin-top: 140px;
+    
+}
+
+.third h2 {
+    font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  word-spacing: 20px;
+}
+
+table{
+    margin: auto;
+    width: 80vw;
+    height: 60vh;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    text-transform: uppercase;
+     font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 25px;
+    overflow: hidden;
+    
+}
+
+th,td,tr{
+    background: transparent;
+    transition: all ease 0.3s;
+}
+
+tr:hover{
+    transform: scale(1.05);
+    backdrop-filter: blur(15px);
+    background-color: #ffffff3b;
+}
+
+.feedback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     height: auto;
+    min-height: 100vh;
+   
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    border-radius: 10px;
+    font-size: 30px;
+    margin-left: 8vw;
+    height: 250px;
+    width: 30vw;
+    padding: 30px;
+    margin: 50px auto;
+}
+
+input,
+textarea {
+    color: #fff;
+    background: transparent;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+
+}
+
+form h2 {
+    font-family: "Uncial Antiqua", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+
+form button {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    height: 50px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.c-im{
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    margin-top: 20px;
+    margin-right: 7px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 2px;
+    border: 2px solid #000;
+}
+
+.feedback p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    width: 100vw;
+    font-weight: bold;
+}
+
+.feedback h2{
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+   
+
+
+}
+
+footer {
+    height:auto;
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+}
+
+footer p {
+  
+    font-size: 30px;
+}
+
+@media(max-width :900px){
+    nav{
+        width: 100%;
+    }
+
+    nav li:last-child{
+    display: block;
+}
+
+    
+    .first h1{
+        padding: 0 10px;
+        text-align: center;
+        font-size: 100px;
+        margin: 0 20px;
+       line-height: 1.1;
+       
+    }
+
+    .first{
+        display: flex;
+         align-items: center;
+        flex-direction: column;
+        text-align: center;
+        background-image: url('i1.png');
+        background-repeat: no-repeat;
+        height: auto;
+        background-position: top;
+        background-size: 800px 700px;  
+    }
+
+    .first h4{
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+
+    .image{
+        display: none;
+    }
+
+    .i1{
+        z-index: -1;
+        position: absolute;
+        
+    }
+        
+    .hide{
+        display: none;
+    }
+
+    .games{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .gm{
+        width: 80%;
+    }
+
+    .second{
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .second h1{
+        font-size: 8vw;
+        margin-top: 50px;
+    }
+
+    table{
+        width: 95%;
+        font-size: 14px;
+    }
+
+    th,td{
+        padding: 5px;
+    }
+
+    form{
+        width: 50%;
+       margin: auto;
+    }
+
+    input,textarea{
+        font-size: 16px;
+    }
+
+    .feedback p{
+        width: 100%;
+        text-align: center;
+    }
+
+    img {
+    max-width: 100%;
+    height: auto;
+}
+
+   
+}
+
+
+    </style>
+</head>
+<body>
+    <nav>
+         <ul class="sidebar">
+            <li onclick="hidesidebar()"><a><img src="close.png"> </a></li>
+            <li><a href="#home" >Home </a></li>
+            <li><a href="#games" >Games  </a></li>
+            <li><a href="#Tournament" >Tournments  </a></li>
+            <li><a href="#contact" >Contact </a></li>
+        </ul>
+
+        <ul>
+            <li><a>Gaming Arena </a></li>
+            <li><a href="#home" class="hide">Home </a></li>
+            <li><a href="#games" class="hide">Games  </a></li>
+            <li><a href="#Tournament" class="hide">Tournments  </a></li>
+            <li><a href="#contact" class="hide">Contact </a></li>
+            <li onclick="showsidebar()"><a href="#"><img src="menu.png" class="menu-i"></a></li>
+        </ul>
+    </nav>
+         <section id="home">
+    <div class="first">
+       
+        <div class="text">
+            <h1>Gaming <br><span>Arena</span></h1><br>
+             <blockquote><h4 style="text-align: start;">" Enter the Realm of Legends "</h4></blockquote>
+         </div>      
+    </div>
+   
+     </section>  
+    
+
+    <div class="second">
+        <section id="games">
+            <h1>Featured Games :</h1>
+            <div class="games">
+                <div class="gm">
+                    <img src="https://wallpapercave.com/wp/wp8227964.jpg" class="img">
+                    <p>CALL OF DUTY</p>
+                    <a href="Register.html">
+                        <button>Register</button>
+                    </a>
+
+                </div>
+                 <div class="gm">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhBtMNyoHQkYRpKTslCv3GlrvEG1yUXMaguc0i5fm4WamE-IOvPKvSCwqT-5UTbq_-HCpD4n4OylEtasuyHLR4-IbS5g104d9AkfTHbon3o5476Td79kolPNT0kBRDM4_z_XSflRT5Wb-0g/s1600/Counter+Strike+Source+Game+Wallpapers+06.jpg" class="img">
+                    <p>COUNTER STRIKE</p>
+                     <a href="Register.html">
+                        <button>Register</button>
+                    </a>
+
+                </div>
+
+                 <div class="gm">
+                    <img src="https://w0.peakpx.com/wallpaper/667/86/HD-wallpaper-bgmi-trending-pubg-bgmi-iammsa-pubg-thumbnail.jpg" class="img">
+                    <p>BGMI</p>
+                     <a href="Register.html">
+                        <button>Register</button>
+                    </a>
+
+                </div>
+
+                <div class="gm">
+                    <img src="https://wallpapercave.com/wp/wp5197384.jpg" class="img">
+                    <p>FREE FIRE</p>
+                     <a href="Register.html">
+                        <button>Register</button>
+                    </a>
+
+                </div>
+            </div>
+        </section>    
+    </div>
+<section id="Tournament">
+    <div class="third">
+       <h2>Tournament Match Schedule :</h2>
+<table border="1" cellpadding="4">
+  <tr>
+    <th>Game</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Mode</th>
+  </tr>
+
+  <tr>
+    <td>BGMI</td>
+    <td>10 APR 2026</td>
+    <td>10:00 AM</td>
+    <td>Squad</td>
+  </tr>
+
+  <tr>
+    <td>Free Fire</td>
+    <td>10 APR 2026</td>
+    <td>2:00 PM</td>
+    <td>SQUAD</td>
+  </tr>
+
+  <tr>
+    <td>Call of Duty</td>
+    <td>11 APR 2026</td>
+    <td>11:00 AM</td>
+    <td>Team</td>
+  </tr>
+
+  <tr>
+    <td>Counter Strike</td>
+    <td>12 APR 2026</td>
+    <td>1:00 PM</td>
+    <td>TEAM</td>
+  </tr>
+
+</table>
+
+    </div>
+    </section>
+
+    <div class="feedback">
+        <section id="contact">
+            <form>
+                <h2 style="color: #fff;">Contact :</h2>
+                <input type="text" placeholder="Enter your name">
+                <input type="email" placeholder="Enter your email">
+                <textarea placeholder="Your messege"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+
+            <p>
+                <img src="email (1).png" class="c-im">Email :<u>gamingarena@gmail.com</u><br>
+                <img src="phone-call.png" class="c-im">Contact :91 XXXXXXXXXX<br>
+                <img src="maps-and-flags.png" class="c-im">Address :Solapur,Maharashtra,India
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <hr>
+        <p>
+             © 2026 Gaming Arena | All rights reserved | Designed by :Ambure Suraj Ganesh
+        </p>
+    </footer>
+
+    <script>
+        function showsidebar(){
+            const sidebar =document.querySelector('.sidebar')
+            sidebar.style.display ='flex'
+        }
+
+         function hidesidebar(){
+            const sidebar =document.querySelector('.sidebar')
+            sidebar.style.display ='none'
+        }
+
+    </script>
+</body>
+</html>

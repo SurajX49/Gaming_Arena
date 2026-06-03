@@ -1,0 +1,281 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="games.png" type="image/x-icon" class="icon-im">
+    <title>Register</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Bebas+Neue&family=Boldonse&family=Bonheur+Royale&family=Bungee&family=Felipa&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Unbounded:wght@200..900&family=Uncial+Antiqua&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Bebas+Neue&family=Boldonse&family=Bonheur+Royale&family=Bungee&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Felipa&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Unbounded:wght@200..900&family=Uncial+Antiqua&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Bebas+Neue&family=Boldonse&family=Bonheur+Royale&family=Bungee&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Felipa&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Press+Start+2P&family=Unbounded:wght@200..900&family=Uncial+Antiqua&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Bebas+Neue&family=Boldonse&family=Bonheur+Royale&family=Bungee&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Felipa&family=Lobster&family=Lugrasimo&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Play:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Unbounded:wght@200..900&family=Uncial+Antiqua&family=Zen+Dots&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+        background-color: #0B0F18;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            background-image: url('Registerbg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .back {
+            color: #fff;
+            margin: 10px;
+            background-color: #00000088;
+            display: flex;
+            justify-content: flex-start;
+            gap: 1.5em;
+            align-items: center;
+            border-radius: 10px;
+            padding: 5px;
+            width: 15%;
+            font-size: 20px;
+            font-weight: bold;
+            border: inset solid #000;
+
+        }
+
+        .img {
+            background-color: #fff;
+            border-radius: 50%;
+            padding: 1px;
+            height: 30px;
+            width: 30px;
+        }
+
+
+        form {
+            color: #fff;
+            padding: 30px;
+            display: block;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(10px);
+            background-color: #000;
+            height: auto;
+            width: 90%;
+            max-width: 400px;
+            margin-top: 2%;
+               font-family: "Poppins", sans-serif;
+        }
+
+        ::placeholder{
+            color: #fff;
+            opacity: 0.7;
+             font-family: "Poppins", sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+               font-family: "Orbitron", sans-serif;
+        }
+
+        input,
+        select,
+        textarea {
+            font-size: 15px;
+            color: #fff;
+                font-family: "Poppins", sans-serif;
+            background: transparent;
+            border: none;
+            outline: none;
+            border-bottom: #fff 1px solid;
+            margin-bottom: 20px;
+            padding: 8px 5px;
+            transition: all ease-in-out 0.3s;
+        }
+
+        label{
+            margin-left: 15px;
+                color: #fff;
+                font-size: 18px;
+                font-family: "Poppins", sans-serif;
+                font-weight: 400;
+        }
+
+        select {
+            color: #fff;
+        }
+
+        option {
+            color: #000;
+        }
+
+        .course {
+            display: flex;
+            gap: 20px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .btn {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 5em;
+        }
+
+        button {
+            cursor: pointer;
+            height: 50px;
+            border: none;
+            width: 200px;
+            color: #fff;
+            transition: all ease 0.3s;
+            font-family: "Orbitron", sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            height: 60px;
+            background: linear-gradient(90deg, #0B0F18 20%, rgba(253, 29, 29, 1) 60%);
+            transition: all ease 0.3s;
+        }
+
+        input:focus {
+            transform: translateY(-5px);
+        }
+
+        button:hover {
+            opacity: 0.80;
+            transform: scale(1.05);
+            transform: translateY(-4px);
+        }
+
+
+
+        @media (max-width:750px) {
+
+            body {
+                background-color: #0B0F18;
+                background-image: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                padding: 20px 20px;
+                color: #000;
+            }
+
+            .back {
+                display: flex;
+                z-index: 999;
+                width: 10%;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .back p {
+                display: none;
+            }
+
+            .back .img {
+                display: block;
+                content: url('home.png');
+                margin: auto;
+            }
+
+            form {
+                background-image: url('Registerbg.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 95%;
+                padding: 20px;
+                margin: auto;
+            }
+
+            .course {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .course label {
+                display: flex;
+                align-self: center;
+                gap: 5px;
+                font-size: 20px;
+            }
+
+            .btn {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            button {
+                width: 100%;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <p style="background:#efebeb; padding:10px; border-radius:8px; text-align:center;">
+  ⚠️ This is a demo project. No real data is collected.
+</p>
+    <div class="back">
+        <a href="Info.html"><img src="previous.png" class="img"></a>
+        <p>Back to Info Page</p>
+    </div>
+    <div class="main">
+
+        <form onsubmit=showmessage()>
+            <h2>Tournment Registration</h2>
+            <input type="text" placeholder="Enter Team Name" required><br>
+            <select required>
+                <option selected disabled>Select Game</option>
+                <option>COD</option>
+                <option>Counter Strike</option>
+                <option>BGMI</option>
+                <option>FREE FIRE</option>
+            </select>
+            <input type="email" placeholder="Enter your email" required><br>
+        
+
+            <select required>
+                <option selected disabled>Select Region</option>
+                <option>Asia</option>
+                <option>Europe</option>
+                <option>Brazil</option>
+                <option>US</option>
+            </select>
+
+            <div class="course" required>
+                Members :
+                <label><input type="radio" name="member" style="margin-right: 7px;">Solo</label>
+                <label><input type="radio" name="member" style="margin-right: 7px;">Duo</label>
+                <label><input type="radio" name="member" style="margin-right: 7px;">Squad</label>
+
+            </div>
+
+            <div class="btn">
+                <button type="reset">Reset</button>
+                <button type="submit">Register</button>
+            </div>
+        </form>
+
+        <script>
+            function showmessage() {
+                alert('Registration Completed');
+            }
+        </script>
+    </div>
+   <p style="background:#ced0dc; padding:10px; border-radius:8px; text-align:center; float:bottom; margin-top:20px;" >
+  | This site does not store your personal data |
+</p>
+</body>
+
+</html>
