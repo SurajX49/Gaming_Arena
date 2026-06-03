@@ -90,7 +90,7 @@ It showcases featured games, tournament schedules, and a contact section for use
 
 **Suraj G. Ambure**
 --
-|GP Solapur|
+| GP Solapur |
 
 ---
 
@@ -103,5 +103,3 @@ This project is created for educational purpose.NO real data is collected
 ⭐ If you like this project, give it a star on GitHub!
 
 ---
-
-Just tell me 👍
